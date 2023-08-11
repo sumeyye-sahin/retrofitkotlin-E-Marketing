@@ -25,6 +25,7 @@ class RvAdapter (private val productList: List<Product>) : RecyclerView.Adapter<
         holder.binding.apply {
             textView.text = currentItem.title
             Picasso.get().load(currentItem.thumbnail).into(imageView)
+            textView2.text = "Fiyat: ${currentItem.price.toString()} TL"
         }
     }
 
